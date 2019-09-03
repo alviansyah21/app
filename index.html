@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appSwapi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <title>app SWAPI</title>
+
+</head>
+<body>
+    <div ng-include="'_partials/n_index.html'"></div>
+    <div class="jumbotron jumbotron-fluid">
+        <div ng-include="'_partials/header.html'"></div>
+        <div ng-include="'_partials/desc.html'"></div>
+    </div>
+    <div class="container" ng-controller="searchSWAPI" data-ng-view>
+        <div>
+            <div class="d-flex justify-content-center">
+                <h2 class="mb-3">Try It Now!</h2>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form class="input-group col-md-8 mb-3" name="searchForm">
+                    <input type="text" class="form-control" id="search-input" placeholder="people or planets or starships or vehicles or species or films" ng-model="searchparam" required autofocus>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-dark" ng-click="fetch()" ng-disabled="searchForm.$invalid">Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="results mt-4 border shadow-sm p-3 mb-5 bg-white rounded">
+            <h2>Result :</h2>
+            <div class="container-fluid mb-4 pre-scrollable">
+                <pre class="result" swapi-srch-results ng-repeat="swapi in swapiResults"></pre>
+            </div>
+        </div>
+        <div class="noResults"></div>
+    </div>
+    <div ng-include="'_partials/footer.html'"></div>
+</body>
+</html>

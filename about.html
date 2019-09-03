@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appSwapi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/libs/angular/angular-route.js"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <title>OMDb API</title>
+
+</head>
+<body>
+    <div ng-include="'_partials/n_about.html'"></div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div ng-include="'_partials/header.html'"></div>
+    </div>
+    <div class="container">
+        <h3>What is This ?</h3>
+        <p>The Star Wars API is the world's first quantified and programmatically-formatted set of Star Wars data. <br>
+            After hours of watching films and trawling through content online, we present to you all the <b>People, Films, Species, Starships, Vehicles and Planets</b> from Star Wars. <br>
+            We've formatted this data in <b>JSON</b> and exposed it to you in a <b>RESTish</b> implementation that allows you to programmatically collect and measure the data.</p>
+        <blockquote>
+            <cite>— <a href="https://swapi.co/documentation" target="_blank">Check out the documentation to get started consuming swapi data</a></cite>
+        </blockquote>
+    </div>
+    
+    <div ng-include="'_partials/footer.html'"></div>
+</body>
+</html>
